@@ -27,10 +27,10 @@ import { useStateContext } from "./contexts/ContextProvider";
 import "./App.css";
 
 const App = () => {
-  const { activeMenu } = useStateContext();
+  const { activeMenu, themeSettings, setThemeSettings, currentColor, currentMode } = useStateContext();
 
   return (
-    <div>
+    <div className={currentMode === 'Dark' ? 'dark' : ''}>
       <BrowserRouter>
         <div className="flex relative dark:bg-main-dark-bg">
           {/* Settings Button */}{" "}
@@ -44,10 +44,12 @@ const App = () => {
               <button
                 type="button"
                 style={{
-                  background: "blue",
+                  background: currentColor,
                   borderRadius: "50%",
+
                 }}
                 className="text-3xl p-3 text-white hover:drop-shadow-xl hover:bg-light-gray"
+                onClick={() => setThemeSettings(true)}
               >
                 <FiSettings />
               </button>{" "}
@@ -76,7 +78,7 @@ const App = () => {
             </div>{" "}
             
             {/* Theme Settings */}{" "}
-            <ThemeSettings />
+            {themeSettings && <ThemeSettings />}
 
             {/* React Routes */}{" "}
             <div>
