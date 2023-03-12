@@ -19,13 +19,13 @@ import product9 from "../data/product9.jpg";
 import { useStateContext } from "../contexts/ContextProvider";
 
 const Ecommerce = () => {
-  const {currentColor} = useStateContext()
+  const { currentColor } = useStateContext();
   return (
-    <div className="mt-12">
-      {/* First Section */}
-      <div className="flex flex-wrap lg:flex-nowrap justify-center">
-        {/* Earnings */}
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center">
+    <div>
+
+      {/* Earnings */}
+      <div className="flex flex-wrap justify-start m-6">
+        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-xl p-8">
           <div className="flex justify-between items-center">
             <div>
               <p className="font-bold text-gray-400">Earnings</p>
@@ -41,15 +41,16 @@ const Ecommerce = () => {
               size="md"
             />
           </div>
-        </div>{/* Earnings */}
-        
+        </div>
+      </div>
+       {/* Earnings */}
 
         {/* Cards */}
-        <div className="flex m-3 flex-wrap justify-center gap-1 items-center">
+        <div className="flex m-6 flex-wrap justify-start gap-2 items-center">
           {earningData.map((item) => (
             <div
               key={item.title}
-              className="bg-white h-44 dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56  p-4 pt-9 rounded-2xl "
+              className="bg-white h-44 dark:text-gray-200 dark:bg-secondary-dark-bg p-4 pt-9 rounded-2xl "
             >
               <button
                 type="button"
@@ -67,13 +68,11 @@ const Ecommerce = () => {
               <p className="text-sm text-gray-400  mt-1">{item.title}</p>
             </div>
           ))}
-        </div> {/* Cards */}    
-      </div>{/* First Section */}
-      
+        </div>{" "}
+        {/* Cards */}
 
-      {/* Second Section */}
-      <div className="flex gap-10 flex-wrap justify-center">
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780  ">
+        {/* Data Table */}
+        <div className="bg-white m-6 dark:text-gray-200 dark:bg-secondary-dark-bg p-4 rounded-2xl w-1/2">
           {/* Revenue */}
           <div className="flex justify-between">
             <p className="font-semibold text-xl">Revenue Updates</p>
@@ -82,26 +81,29 @@ const Ecommerce = () => {
                 <span>
                   <GoPrimitiveDot />
                 </span>
-                <span>Expense</span>
+                <span className="dark:text-white">Expense</span>
               </p>
-              <p className="flex items-center gap-2 text-green-400 hover:drop-shadow-xl">
+              <p
+                style={{ color: currentColor }}
+                className="flex items-center gap-2 hover:drop-shadow-xl"
+              >
                 <span>
                   <GoPrimitiveDot />
                 </span>
                 <span>Budget</span>
               </p>
             </div>
-          </div>{/* Revenue */}
-          
+          </div>
+        
 
           {/* Budget Expense */}
           <div className="mt-10 flex gap-10 flex-wrap justify-center">
             {/* Left Side */}
             <div className="border-r-1 border-color m-4 pr-10">
               <div>
-                <p>
+                <p className="flex items-center">
                   <span className="text-3xl font-semibold">$93,438</span>
-                  <span className="inline-flex items-center w-10 h-10 p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-400 ml-3 text-s">
+                  <span className="inline-flex items-center w-10 h-10 p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-500 ml-3 text-s">
                     23%
                   </span>
                 </p>
@@ -129,18 +131,18 @@ const Ecommerce = () => {
                   text="Download Report"
                   borderRadius="10px"
                 />
-              </div>  
+              </div>
             </div>
+
             {/* Right Side */}
             <div>
-              <Stacked width="320px" height="360px"/>
-            </div>            
-          </div>{/* Budget Expense */}
-          
-
+              <Stacked width="320px" height="360px" />
+            </div>
+          </div>
+          {/* Budget Expense */}
         </div>
-      </div>{/* Second Section */}
-      
+  
+
     </div>
   );
 };
