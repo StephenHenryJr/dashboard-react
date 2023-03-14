@@ -23,6 +23,29 @@ import product6 from './product6.jpg';
 import product7 from './product7.jpg';
 import product8 from './product8.jpg';
 
+export const chatMessages = [
+  {
+    notification: 'Jordan joined the Team!',
+    action: 'Congratulate him',
+    time: '9:04 AM'
+  },
+  {
+    notification: 'New message received',
+    action: 'Tyler sent you a new message',
+    time: '11:11 AM'
+  },
+  {
+    notification: 'New Payment received',
+    action: 'Check your earning',
+    time: '3:47 AM'
+  },
+  {
+    notification: 'Richard completed work',
+    action: 'Assign him a new project',
+    time: '1:12 AM'
+  },
+]
+
 export const gridOrderImage = (props) => (
   <div>
     <img
@@ -5869,3 +5892,4 @@ export const PyramidData = [
   { x: 'Fruits', y: 520, text: '520 cal' },
   { x: 'Bread, Rice, Pasta', y: 930, text: '930 cal' },
 ];
+

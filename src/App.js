@@ -33,6 +33,7 @@ const App = () => {
     <div className={currentMode === 'Dark' ? 'dark' : ''}>
       <BrowserRouter>
         <div className="flex relative dark:bg-main-dark-bg">
+          
           {/* Settings Button */}{" "}
           <div
             className="fixed right-4 bottom-4"
@@ -55,6 +56,7 @@ const App = () => {
               </button>{" "}
             </TooltipComponent>{" "}
           </div>
+          
           {/* Sidebar */}{" "}
           {activeMenu ? (
             <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white">
@@ -65,6 +67,7 @@ const App = () => {
               <Sidebar />
             </div>
           )}
+          
           {/* Navbar */}{" "}
           <div
             className={

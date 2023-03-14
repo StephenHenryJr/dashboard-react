@@ -24,7 +24,7 @@ const Ecommerce = () => {
     <div>
 
       {/* Earnings */}
-      <div className="flex flex-wrap justify-start m-6">
+      <div className="flex flex-wrap justify-start m-8">
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-xl p-8">
           <div className="flex justify-between items-center">
             <div>
@@ -46,7 +46,7 @@ const Ecommerce = () => {
        {/* Earnings */}
 
         {/* Cards */}
-        <div className="flex m-6 flex-wrap justify-start gap-2 items-center">
+        <div className="flex m-8 flex-wrap justify-start gap-2 items-center">
           {earningData.map((item) => (
             <div
               key={item.title}
@@ -72,7 +72,7 @@ const Ecommerce = () => {
         {/* Cards */}
 
         {/* Data Table */}
-        <div className="bg-white m-6 dark:text-gray-200 dark:bg-secondary-dark-bg p-4 rounded-2xl w-1/2">
+        <div className="bg-white m-8 dark:text-gray-200 dark:bg-secondary-dark-bg p-4 rounded-2xl w-1/2">
           {/* Revenue */}
           <div className="flex justify-between">
             <p className="font-semibold text-xl">Revenue Updates</p>
@@ -103,7 +103,7 @@ const Ecommerce = () => {
               <div>
                 <p className="flex items-center">
                   <span className="text-3xl font-semibold">$93,438</span>
-                  <span className="inline-flex items-center w-10 h-10 p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-500 ml-3 text-s">
+                  <span className="inline-flex items-center w-10 h-10 p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-500 ml-3 text-s" style={{background: currentColor}}>
                     23%
                   </span>
                 </p>

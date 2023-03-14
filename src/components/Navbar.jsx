@@ -18,7 +18,7 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
       type="button"
       onClick={customFunc}
       style={{ color }}
-      className="relative text-2xl rounded-full p-3 hover:bg-light-gray"
+      className="relative text-2xl rounded-full p-3 hover:bg-light-gray dark:hover:bg-secondary-dark-bg"
     >
       <span
         style={{ background: dotColor }}
@@ -85,7 +85,7 @@ const Navbar = () => {
 
         <TooltipComponent content="Profile" position="BottomCenter">
           <div
-            className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg"
+            className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg dark:hover:bg-secondary-dark-bg"
             onClick={() => handleClick("userProfile")}
           >
             <img
@@ -94,8 +94,8 @@ const Navbar = () => {
               alt="user-profile"
             />
             <p>
-              <span className="text-gray-400 text-14">Hi,</span>{" "}
-              <span className="text-gray-400 font-bold ml-1 text-14">
+              <span className="text-gray-400 text-14 dark:text-white">Hi,</span>{" "}
+              <span className="text-gray-400 font-bold ml-1 text-14 dark:text-white">
                 Stephen
               </span>
             </p>
