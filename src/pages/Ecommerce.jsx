@@ -25,7 +25,7 @@ const Ecommerce = () => {
 
       {/* Earnings */}
       <div className="flex flex-wrap justify-start m-8">
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-xl p-8">
+        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-xl p-8 shadow-md">
           <div className="flex justify-between items-center">
             <div>
               <p className="font-bold text-gray-400">Earnings</p>
@@ -50,7 +50,7 @@ const Ecommerce = () => {
           {earningData.map((item) => (
             <div
               key={item.title}
-              className="bg-white h-44 dark:text-gray-200 dark:bg-secondary-dark-bg p-4 pt-9 rounded-2xl "
+              className="bg-white h-44 dark:text-gray-200 dark:bg-secondary-dark-bg p-4 pt-9 rounded-2xl shadow-md"
             >
               <button
                 type="button"
@@ -72,7 +72,7 @@ const Ecommerce = () => {
         {/* Cards */}
 
         {/* Data Table */}
-        <div className="bg-white m-8 dark:text-gray-200 dark:bg-secondary-dark-bg p-4 rounded-2xl w-1/2">
+        <div className="bg-white m-8 dark:text-gray-200 dark:bg-secondary-dark-bg p-4 rounded-2xl w-1/2 shadow-md">
           {/* Revenue */}
           <div className="flex justify-between">
             <p className="font-semibold text-xl">Revenue Updates</p>
