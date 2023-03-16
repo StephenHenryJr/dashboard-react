@@ -27,7 +27,7 @@ import { useStateContext } from "./contexts/ContextProvider";
 import "./App.css";
 
 const App = () => {
-  const { activeMenu, themeSettings, setThemeSettings, currentColor, currentMode } = useStateContext();
+  const { activeMenu, themeSettings, setThemeSettings, currentColor, currentMode, showChat } = useStateContext();
 
   return (
     <div className={currentMode === 'Dark' ? 'dark' : ''}>

@@ -10,12 +10,9 @@ const initialState = {
 };
 
 export const ContextProvider = ({ children }) => {
-  const [activeMenu, setActiveMenu] = useState(true); //For our side bar
-
-  const [isClicked, setIsClicked] = useState(initialState); //For our nav bar
-
+  const [activeMenu, setActiveMenu] = useState(true); 
+  const [isClicked, setIsClicked] = useState(initialState); 
   const [screenSize, setScreenSize] = useState(undefined)
-
   const [currentColor, setCurrentColor] = useState('#03C9D7')
   const [currentMode, setCurrentMode] = useState('Light')
   const [themeSettings, setThemeSettings] = useState(false)
@@ -37,16 +34,21 @@ export const ContextProvider = ({ children }) => {
     setIsClicked({ ...initialState, [clicked]: true})
   } //For handling our navbar links
 
+  const handleClose = (clicked) => {
+    setIsClicked({ ...initialState, [clicked]: false})
+  }
+
   return (
     <StateContext.Provider
       value={{ 
         activeMenu,  setActiveMenu, 
         isClicked, setIsClicked, 
-        handleClick, 
+        handleClick, handleClose, 
         screenSize, setScreenSize, 
         currentColor,  setColor,
         currentMode, setMode,
-        themeSettings, setThemeSettings
+        themeSettings, setThemeSettings, 
+
       }}
     >
       {children}

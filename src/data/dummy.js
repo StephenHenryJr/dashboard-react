@@ -23,6 +23,28 @@ import product6 from './product6.jpg';
 import product7 from './product7.jpg';
 import product8 from './product8.jpg';
 
+
+export const userInfo = [
+  {
+    user: 'Stephen Henry',
+    title: 'Administrator',
+    email: 'info@mydashboard.com'
+  },
+]
+export const userProfileOptions = [
+  {
+    option: 'My Profile',
+    description: 'Account Settings',
+  },
+  {
+    option: 'My Inbox',
+    description: 'Messages & Emails',
+  },
+  {
+    option: 'My Tasks',
+    description: 'To-do and Daily Tasks',
+  },
+]
 export const chatMessages = [
   {
     notification: 'Jordan joined the Team!',
@@ -45,6 +67,25 @@ export const chatMessages = [
     time: '1:12 AM'
   },
 ]
+export const notificationMessages = [
+  {
+    notification: 'Samantha joined the Team!',
+    action: 'Congratulate her',
+  },
+  {
+    notification: 'You reached a new milestone',
+    action: 'Check your progress',
+  },
+  {
+    notification: 'Haeven joined the team',
+    action: 'Congratulate him',
+  },
+  {
+    notification: 'New payment received',
+    action: 'Check your payments',
+  },
+]
+
 
 export const gridOrderImage = (props) => (
   <div>
