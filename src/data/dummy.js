@@ -93,7 +93,7 @@ export const cartItems = [
   },
   {
     item: 'LCD Monitor',
-    type: 'Electronics - Monitor',
+    type: 'Electronics - Monitors',
     price: '$299.99'
   },
   {

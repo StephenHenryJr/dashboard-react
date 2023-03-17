@@ -4,6 +4,22 @@ import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { useStateContext } from "../contexts/ContextProvider";
 import { cartItems } from "../data/dummy";
 
+const Counter = () => {
+  return (
+    <div className="">
+      <div className="flex">
+        <button className="w-8 h-8 border border-black  flex items-center justify-center">
+          +
+        </button>
+        <button className="w-8 h-8 border-y border-black  flex items-center justify-center"></button>
+        <button className="w-8 h-8 border border-black  flex items-center justify-center">
+          -
+        </button>
+      </div>
+    </div>
+  );
+};
+
 const Cart = () => {
   const { currentColor, handleClose } = useStateContext();
 
@@ -30,14 +46,25 @@ const Cart = () => {
               </div>
 
               <div className="ml-4">
-                <h3 className="text-sm">{cartItem.item}</h3>
-                <p className="text-xs text-gray-400 my-0.5">{cartItem.type}</p>
-                <p className="text-xs text-gray-400">{cartItem.price}</p>
+                <h3 className="text-md">{cartItem.item}</h3>
+                <p className="text-sm text-gray-400 my-1">{cartItem.type}</p>
+                <p className="text-md font-semibold">{cartItem.price}</p>
               </div>
             </div>
           ))}
         </div>
 
+        <div>
+          <div className="flex justify-between my-4">
+            <p className="text-gray-400">Sub Total</p>
+            <p>$890</p>
+          </div>
+          <div className="flex justify-between my-4">
+            <p className="text-gray-400">Total</p>
+            <p>$890</p>
+          </div>
+        </div>
+        
         <div>
           <button
             className="p-2 mt-2 text-white rounded w-full"
