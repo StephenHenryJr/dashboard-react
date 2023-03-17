@@ -85,6 +85,23 @@ export const notificationMessages = [
     action: 'Check your payments',
   },
 ]
+export const cartItems = [
+  {
+    item: 'USB Specialty Package',
+    type: 'Electronics - Accessories',
+    price: '$2.99'
+  },
+  {
+    item: 'LCD Monitor',
+    type: 'Electronics - Monitor',
+    price: '$299.99'
+  },
+  {
+    item: 'Gaming Chair',
+    type: 'Office - Furniture',
+    price: '$149.99'
+  },
+]
 
 
 export const gridOrderImage = (props) => (
