@@ -7,12 +7,12 @@ import { cartItems } from "../data/dummy";
 const Counter = () => {
   return (
     <div className="">
-      <div className="flex">
-        <button className="w-8 h-8 border border-black  flex items-center justify-center">
+      <div className="flex text-gray-400 text-lg">
+        <button className="w-9 h-9 border border-gray-400  flex items-center justify-center rounded-l-md">
           +
         </button>
-        <button className="w-8 h-8 border-y border-black  flex items-center justify-center"></button>
-        <button className="w-8 h-8 border border-black  flex items-center justify-center">
+        <button className="w-9 h-9 border-y border-gray-400  flex items-center justify-center">0</button>
+        <button className="w-9 h-9 border border-gray-400 flex items-center justify-center rounded-r-md">
           -
         </button>
       </div>
@@ -26,6 +26,7 @@ const Cart = () => {
   return (
     <div className="bg-half-transparent w-screen fixed nav-item top-0 right-0">
       <div className="float-right p-8 h-screen bg-white dark:[#484B52] dark:text-gray-500 w-400">
+
         <div className="flex justify-between items-center">
           <p className="font-semibold text-xl">Shopping Cart</p>
           <button
@@ -48,7 +49,10 @@ const Cart = () => {
               <div className="ml-4">
                 <h3 className="text-md">{cartItem.item}</h3>
                 <p className="text-sm text-gray-400 my-1">{cartItem.type}</p>
-                <p className="text-md font-semibold">{cartItem.price}</p>
+                <div className="flex items-center">
+                  <p className="text-md font-semibold mr-2">{cartItem.price}</p>
+                  <Counter />
+                </div>
               </div>
             </div>
           ))}
@@ -57,11 +61,11 @@ const Cart = () => {
         <div>
           <div className="flex justify-between my-4">
             <p className="text-gray-400">Sub Total</p>
-            <p>$890</p>
+            <p>$452.97</p>
           </div>
           <div className="flex justify-between my-4">
             <p className="text-gray-400">Total</p>
-            <p>$890</p>
+            <p>$529.97</p>
           </div>
         </div>
         
@@ -73,6 +77,8 @@ const Cart = () => {
             Place order
           </button>
         </div>
+
+
       </div>
     </div>
   );

@@ -21,15 +21,14 @@ import { useStateContext } from "../contexts/ContextProvider";
 const Ecommerce = () => {
   const { currentColor } = useStateContext();
   return (
-    <div>
+    <div className="p-8 md:m-0 mt-10">
 
       {/* Earnings */}
-      <div className="flex flex-wrap justify-start m-8">
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-xl p-8 shadow-md">
-          <div className="flex justify-between items-center">
+        <div className="w-full bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-xl p-8 shadow-md">
+          <div className="">
             <div>
-              <p className="font-bold text-gray-400">Earnings</p>
-              <p className="text-2xl">$63,448.78</p>
+              <p className="font-bold text-gray-400">Hey Stephen,</p>
+              <p className="text-2xl">Download Latest Report</p>
             </div>
           </div>
           <div className="mt-6">
@@ -38,19 +37,18 @@ const Ecommerce = () => {
               bgColor={currentColor}
               text="Download"
               borderRadius="10px"
-              size="md"
+              size="sm"
             />
           </div>
         </div>
-      </div>
        {/* Earnings */}
 
         {/* Cards */}
-        <div className="flex m-8 flex-wrap justify-start gap-2 items-center">
+        <div className="w-full lg:w-1/2 grid grid-cols-2 gap-4 my-4">
           {earningData.map((item) => (
             <div
               key={item.title}
-              className="bg-white h-44 dark:text-gray-200 dark:bg-secondary-dark-bg p-4 pt-9 rounded-2xl shadow-md"
+              className="bg-white h-44 w-full dark:text-gray-200 dark:bg-secondary-dark-bg p-4 pt-9 rounded-2xl shadow-md"
             >
               <button
                 type="button"
@@ -71,8 +69,8 @@ const Ecommerce = () => {
         </div>{" "}
         {/* Cards */}
 
-        {/* Data Table */}
-        <div className="bg-white m-8 dark:text-gray-200 dark:bg-secondary-dark-bg p-4 rounded-2xl w-1/2 shadow-md">
+        {/* Revenue Updates */}
+        <div className="bg-white w-full lg:w-1/2 dark:text-gray-200 dark:bg-secondary-dark-bg p-8 rounded-2xl shadow-md">
           {/* Revenue */}
           <div className="flex justify-between">
             <p className="font-semibold text-xl">Revenue Updates</p>
@@ -99,7 +97,7 @@ const Ecommerce = () => {
           {/* Budget Expense */}
           <div className="mt-10 flex gap-10 flex-wrap justify-center">
             {/* Left Side */}
-            <div className="border-r-1 border-color m-4 pr-10">
+            <div className="m-4">
               <div>
                 <p className="flex items-center">
                   <span className="text-3xl font-semibold">$93,438</span>
@@ -124,22 +122,9 @@ const Ecommerce = () => {
                   color={currentColor}
                 />
               </div>
-              <div className="mt-10">
-                <Button
-                  color="white"
-                  bgColor={currentColor}
-                  text="Download Report"
-                  borderRadius="10px"
-                />
-              </div>
-            </div>
-
-            {/* Right Side */}
-            <div>
-              <Stacked width="320px" height="360px" />
             </div>
           </div>
-          {/* Budget Expense */}
+          
         </div>
   
 
