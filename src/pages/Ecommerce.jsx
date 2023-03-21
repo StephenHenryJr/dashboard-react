@@ -24,7 +24,7 @@ const Ecommerce = () => {
     <div className="p-8 md:m-0 mt-10">
 
       {/* Earnings */}
-        <div className="w-full bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-xl p-8 shadow-md">
+        <div className="w-full bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-xl p-8 shadow-md bg-hero-pattern bg-no-repeat bg-cover bg-center">
           <div className="">
             <div>
               <p className="font-bold text-gray-400">Hey Stephen,</p>
@@ -97,7 +97,7 @@ const Ecommerce = () => {
           {/* Budget Expense */}
           <div className="mt-10 flex gap-10 flex-wrap justify-center">
             {/* Left Side */}
-            <div className="m-4">
+            <div className="m-4 w-full">
               <div>
                 <p className="flex items-center">
                   <span className="text-3xl font-semibold">$93,438</span>
