@@ -138,6 +138,18 @@ const Ecommerce = () => {
         </div>
       </div>
 
+      <div className="grid lg:grid-cols-3 grid-cols-4 gap-4 my-4">
+        <div className="col-span-2 lg:col-span-1 bg-white w-full h-96 dark:text-gray-200 dark:bg-secondary-dark-bg p-8 rounded-2xl shadow-md">
+            
+        </div>
+        <div className="col-span-2 lg:col-span-1  bg-white w-full h-96 dark:text-gray-200 dark:bg-secondary-dark-bg p-8 rounded-2xl shadow-md">
+            
+        </div>
+        <div className="col-span-4 lg:col-span-1  bg-white w-full h-96 dark:text-gray-200 dark:bg-secondary-dark-bg p-8 rounded-2xl shadow-md">
+            
+        </div>
+      </div>
+
     </div>
   );
 };
